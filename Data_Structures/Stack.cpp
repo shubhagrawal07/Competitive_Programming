@@ -4,15 +4,22 @@ using namespace std;
 class Stack
 {
 private:
+    // Private data members (cannot be accessed out of this class)
     int size;
     int index;
     int *arr;
+
 public:
+    // Constructor
     Stack(int size);
+
+    //Member Functions
     void sPush(int data);
     void sPop();
     bool isEmpty();
     int sTop();
+
+    // Destructor
     ~Stack();
 };
 
@@ -60,7 +67,7 @@ int Stack::sTop(){
 
 int main(){
 
-    // Dynamically allocating stack memory;
+    // Dynamically allocating memory;
     Stack *st = new Stack(5);
     cout<<st->isEmpty()<<endl;
 
@@ -75,14 +82,17 @@ int main(){
     st->sPop();
     cout<<st->sTop()<<endl;
 
+    // explicitly calling the destroctor
     delete st;
 
+    // allocating memory locally
     Stack st2(2);
 
     cout<<st2.isEmpty()<<endl;
     st2.sPush(10);
     cout<<st2.isEmpty()<<endl;
 
+    // no need to call destructor explixitly as it will automatically get destroyed after fuction call is over
 
     return 0;
 }
