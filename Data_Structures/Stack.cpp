@@ -37,6 +37,8 @@ Stack::~Stack()
 
 void Stack::sPush(int data){
     if(index==size-1){
+
+        // cerr in c++ is used to log errors
         cerr<<"Stack Overflow!";
         return;
     }
@@ -49,6 +51,8 @@ void Stack::sPush(int data){
 
 void Stack::sPop(){
     if(index!=-1)index--;
+
+    // cerr in c++ is used to log errors
     else cerr<<"Stack Underflow!";
     return;
 }
@@ -60,6 +64,8 @@ bool Stack::isEmpty(){
 int Stack::sTop(){
     if(index>=0&&index<size)return arr[index];
     else{
+
+        // cerr in c++ is used to log errors
         cerr<<"Invalid Operation";
         return -1;
     }
