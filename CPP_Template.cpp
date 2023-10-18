@@ -5,6 +5,7 @@ using namespace std;
 #define vi vector<int>
 #define ump unordered_map<int,int>
 #define loop(i,n) for(int i=0;i<n;i++)
+#define all(a) a.begin(),a.end()
 
 
 
